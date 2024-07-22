@@ -28,6 +28,16 @@
         </ul>
     </section>
 
+    {% if all_later_posts %}
+        <section id="latest-posts">
+            <h2>Read Later</h2>
+            <ul>
+                {% for post in all_later_posts %}
+                    {% include "blog/includes/post.html" %}
+                {% endfor %}
+            </ul>
+        </section>
+    {% endif %}
     <section id="about">
         <h2>What I do?</h2>
         <p>
